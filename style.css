@@ -6,22 +6,25 @@
 
 html, body {
     max-width: 100%;
-/*    overflow-x: hidden;*/
+    overflow-x: hidden;
 }
 body{
     margin: 0;
-    background-color: black;
     color: rgba(54, 162, 235, 1);
     font-family: 'Lato';
+    background-color: #141414;
+
 }
 
 .header {
+    background-color: black;
     grid-area: header;
 /*    background-color: #2e2e2e;*/
     width: 99%;
     border: 1px;
     border-style: solid;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     
     
@@ -33,10 +36,12 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    
 	}
 
 h1{
     padding: 10px;
+/*    font-size: 26px;*/
 }
 
 
@@ -50,11 +55,13 @@ h1{
      
 }
 #barChart, #DoughnutChart, #LineChart{
-    width: 96%;
-}
-#barChart, #DoughnutChart, #LineChart{
+    background-color: black;
+    width: 80%;
     text-align: center;
+    border: 1px solid;
+    border-top: 1px;
 }
+
 
 @media (min-width: 576px) { 
     #barChart, #DoughnutChart, #LineChart{
@@ -65,19 +72,40 @@ h1{
 }
 
 @media (min-width: 767px) {
-    #barChart, #DoughnutChart, #LineChart{
+    #barChart, #DoughnutChart{
         width: 40%;
         margin: 20px;
+        border-top: 1px solid;
+    }
+    #LineChart{
+        width: 80%;
+        display: table; 
+        border: 1px solid;
     }
 }
 
 @media (min-width: 992px) {
-    #barChart, #DoughnutChart, #LineChart{
+    #barChart, #DoughnutChart{
         width: 40%;
         margin: 20px;
     }
+    
+    #LineChart{
+        width: 80%;
+        
+
+    }
+    
 }
 
 @media (min-width: 1200px) {
+     #barChart, #DoughnutChart{
+        width: 25%;
+        margin-left, margin-right: 40px;
+    }
     
+    #LineChart{
+        width: 50%;
+        height: 200px;
+    }
 }
